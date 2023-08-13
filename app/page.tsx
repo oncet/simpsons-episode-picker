@@ -13,7 +13,7 @@ export default function Home() {
           Get random episode
         </Button>
       </form>
-      <h1 className="text-5xl font-extrabold mt-4">Moaning Lisa</h1>
+      <h2 className="text-5xl font-extrabold mt-4">Moaning Lisa</h2>
       <p className="dark:text-slate-400 mt-2">S01E06</p>
     </main>
   );

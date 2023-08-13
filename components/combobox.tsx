@@ -24,7 +24,7 @@ const seasons = [
     label: "All seasons",
   },
   ...Array.from({ length: 33 }, (_, i) => ({
-    value: `season-${i + 1}`,
+    value: `${i + 1}`,
     label: `Season ${i + 1}`,
   })),
 ];
@@ -32,76 +32,85 @@ const seasons = [
 export function ComboboxDemo() {
   const [open, setOpen] = React.useState(false);
   const [selectedOptions, setSelectedOptions] = React.useState<string[]>([
-    "all",
+    seasons[0].value,
   ]);
 
   return (
-    <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger asChild>
-        <Button
-          variant="outline"
-          role="combobox"
-          aria-expanded={open}
-          aria-label="Select seasons"
-          className="w-full justify-between"
-        >
-          <span className="text-ellipsis overflow-hidden whitespace-nowrap">
-            {selectedOptions[0] === "all"
-              ? seasons[0].label
-              : seasons
-                  .filter((season) => selectedOptions.includes(season.value))
-                  .map((season) => season.label)
-                  .join(", ")}
-          </span>
-          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
-        </Button>
-      </PopoverTrigger>
-      <PopoverContent className="p-0 w-[--radix-popover-trigger-width]">
-        <Command>
-          <CommandInput placeholder="Search seasons..." />
-          <CommandEmpty>No season found.</CommandEmpty>
-          <CommandGroup>
-            {seasons.map((framework) => (
-              <CommandItem
-                key={framework.value}
-                value={framework.value}
-                onSelect={(currentValue) => {
-                  if (selectedOptions.includes(currentValue)) {
-                    if (currentValue !== "all") {
-                      setSelectedOptions(
-                        selectedOptions.filter(
-                          (option) => option !== currentValue
-                        )
-                      );
-                    }
-                  } else {
-                    if (currentValue === "all") {
-                      setSelectedOptions(["all"]);
+    <>
+      <Popover open={open} onOpenChange={setOpen}>
+        <PopoverTrigger asChild>
+          <Button
+            variant="outline"
+            role="combobox"
+            aria-expanded={open}
+            aria-label="Select seasons"
+            className="w-full justify-between"
+          >
+            <span className="text-ellipsis overflow-hidden whitespace-nowrap">
+              {selectedOptions[0] === "all"
+                ? seasons[0].label
+                : seasons
+                    .filter((season) => selectedOptions.includes(season.value))
+                    .map((season) => season.label)
+                    .join(", ")}
+            </span>
+            <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          </Button>
+        </PopoverTrigger>
+        <PopoverContent className="p-0 w-[--radix-popover-trigger-width]">
+          <Command>
+            <CommandInput placeholder="Search seasons..." />
+            <CommandEmpty>No season found.</CommandEmpty>
+            <CommandGroup>
+              {seasons.map((season) => (
+                <CommandItem
+                  key={season.value}
+                  value={season.value}
+                  onSelect={(currentValue) => {
+                    const all = seasons[0].value;
+
+                    if (selectedOptions.includes(currentValue)) {
+                      if (currentValue !== all && selectedOptions.length > 1) {
+                        setSelectedOptions(
+                          selectedOptions.filter(
+                            (option) => option !== currentValue
+                          )
+                        );
+                      } else if (currentValue !== all) {
+                        setSelectedOptions([all]);
+                      }
                     } else {
-                      setSelectedOptions([
-                        ...selectedOptions.filter(
-                          (selectedOption) => selectedOption !== "all"
-                        ),
-                        currentValue,
-                      ]);
+                      if (currentValue === all) {
+                        setSelectedOptions([all]);
+                      } else {
+                        setSelectedOptions([
+                          ...selectedOptions.filter(
+                            (selectedOption) => selectedOption !== "all"
+                          ),
+                          currentValue,
+                        ]);
+                      }
                     }
-                  }
-                }}
-              >
-                <Check
-                  className={cn(
-                    "mr-2 h-4 w-4",
-                    selectedOptions.includes(framework.value)
-                      ? "opacity-100"
-                      : "opacity-0"
-                  )}
-                />
-                {framework.label}
-              </CommandItem>
-            ))}
-          </CommandGroup>
-        </Command>
-      </PopoverContent>
-    </Popover>
+                  }}
+                >
+                  <Check
+                    className={cn(
+                      "mr-2 h-4 w-4",
+                      selectedOptions.includes(season.value)
+                        ? "opacity-100"
+                        : "opacity-0"
+                    )}
+                  />
+                  {season.label}
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          </Command>
+        </PopoverContent>
+      </Popover>
+      {selectedOptions[0] !== "all" ? (
+        <input type="hidden" name="seasons" value={selectedOptions.join("-")} />
+      ) : null}
+    </>
   );
 }
