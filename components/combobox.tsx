@@ -45,7 +45,7 @@ export function ComboboxDemo() {
       .map((season) => season.label)
       .join(", ");
   } else {
-    label = selectedOptions.length + " season(s) selected";
+    label = selectedOptions.length + " seasons selected";
   }
 
   return (
