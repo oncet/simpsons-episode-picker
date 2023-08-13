@@ -45,12 +45,9 @@ export function ComboboxDemo() {
           className="w-full justify-between"
         >
           {selectedOptions.length > 0
-            ? seasons
-                .filter((framework) =>
-                  selectedOptions.includes(framework.value)
-                )
-                .map((framework) => framework.label)
-                .join(", ")
+            ? selectedOptions[0] !== "all"
+              ? selectedOptions.length + " season(s) selected"
+              : "All seasons"
             : "Select seasons..."}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
