@@ -35,6 +35,19 @@ export function ComboboxDemo() {
     "all",
   ]);
 
+  let label;
+
+  if (selectedOptions[0] === "all") {
+    label = seasons[0].label;
+  } else if (selectedOptions.length < 4) {
+    label = seasons
+      .filter((season) => selectedOptions.includes(season.value))
+      .map((season) => season.label)
+      .join(", ");
+  } else {
+    label = selectedOptions.length + " season(s) selected";
+  }
+
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
@@ -44,11 +57,7 @@ export function ComboboxDemo() {
           aria-expanded={open}
           className="w-full justify-between"
         >
-          {selectedOptions.length > 0
-            ? selectedOptions[0] !== "all"
-              ? selectedOptions.length + " season(s) selected"
-              : "All seasons"
-            : "Select seasons..."}
+          {label}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
