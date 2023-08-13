@@ -14,7 +14,7 @@ export default function Home() {
         </Button>
       </form>
       <h1 className="text-5xl font-extrabold mt-4">Moaning Lisa</h1>
-      <p className="dark:text-slate-500 mt-2">S01E06</p>
+      <p className="dark:text-slate-400 mt-2">S01E06</p>
     </main>
   );
 }
