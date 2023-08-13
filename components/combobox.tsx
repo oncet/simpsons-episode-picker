@@ -42,6 +42,7 @@ export function ComboboxDemo() {
           variant="outline"
           role="combobox"
           aria-expanded={open}
+          aria-label="Select seasons"
           className="w-full justify-between"
         >
           <span className="text-ellipsis overflow-hidden whitespace-nowrap">
