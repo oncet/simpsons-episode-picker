@@ -3,6 +3,7 @@
   "name": "Random episoder",
   "display": "standalone",
   "start_url": "/",
+  "theme_color": "white",
   "icons": [
     {
       "src": "/images/icons-512.png",
