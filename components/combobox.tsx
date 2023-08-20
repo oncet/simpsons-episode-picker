@@ -69,17 +69,25 @@ export function ComboboxDemo() {
                   onSelect={(currentValue) => {
                     const all = seasons[0].value;
 
+                    // Remove clicked option
                     if (selectedOptions.includes(currentValue)) {
+                      // Remove clicked option if it's not the only one
                       if (currentValue !== all && selectedOptions.length > 1) {
                         setSelectedOptions(
                           selectedOptions.filter(
                             (option) => option !== currentValue
                           )
                         );
-                      } else if (currentValue !== all) {
+                      }
+
+                      // Select all if none is left selected
+                      else if (currentValue !== all) {
                         setSelectedOptions([all]);
                       }
-                    } else {
+                    }
+
+                    // Add clicked option
+                    else {
                       if (currentValue === all) {
                         setSelectedOptions([all]);
                       } else {
@@ -109,7 +117,11 @@ export function ComboboxDemo() {
         </PopoverContent>
       </Popover>
       {selectedOptions[0] !== "all" ? (
-        <input type="hidden" name="seasons" value={selectedOptions.join("-")} />
+        <input
+          type="hidden"
+          name="seasons"
+          value={selectedOptions.sort().join("-")}
+        />
       ) : null}
     </>
   );
