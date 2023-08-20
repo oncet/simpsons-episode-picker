@@ -1,4 +1,4 @@
-import Button from "./button";
+import Form from "./form2";
 
 async function getData(searchParams: any) {
   if (searchParams instanceof FormData) {
@@ -21,18 +21,7 @@ export default async function Page({ searchParams }: { searchParams: any }) {
 
   return (
     <>
-      <form action={myAction}>
-        <input name="query" />
-        <Button onClick={myAction} />
-      </form>
-      <div>
-        <h2>Results</h2>
-        <ul>
-          {data.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </div>
+      <Form myAction={myAction} data={data} />
     </>
   );
 }
