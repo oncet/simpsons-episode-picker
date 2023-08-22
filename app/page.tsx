@@ -1,47 +1,40 @@
-import Form from "./form2";
+import Form from "./form";
 
-async function getData(searchParams: any) {
-  if (searchParams instanceof FormData) {
-    searchParams = searchParams.get("query");
-  }
+async function getData() {
+  const episodes: any = await import("../seasons/season-01.json");
 
-  return ["foo", "bar", "baz"].filter((item) => item.includes(searchParams));
+  return JSON.parse(JSON.stringify(episodes));
 }
 
-export default async function Page({ searchParams }: { searchParams: any }) {
-  const data = await getData(searchParams.query);
+export default async function Home() {
+  const response = await getData();
 
-  async function myAction(searchParams: any) {
+  const data = response.default;
+
+  const onSubmit = async (selectedSeasons: any) => {
     "use server";
 
-    const result = await getData(searchParams);
+    console.log("selectedSeasons", selectedSeasons);
+    console.log("data", data);
 
-    return result;
-  }
+    // data.forEach((episode: any) => {
+    //   console.log("episode", episode);
+    // });
+
+    // const filteredData = data.filter((episode: any) => {
+    //   console.log("episode", episode);
+    // });
+
+    // console.log("filteredData", filteredData);
+
+    return { foo: "bar" };
+  };
 
   return (
-    <>
-      <Form myAction={myAction} data={data} />
-    </>
+    <main className="max-w-screen-sm m-auto p-4">
+      <Form onSubmit={onSubmit} />
+      <h2 className="text-5xl font-extrabold mt-4">Moaning Lisa</h2>
+      <p className="dark:text-slate-400 mt-2">S01E06</p>
+    </main>
   );
 }
-
-// import Form from "./form";
-
-// async function getData() {
-//   const episodes: any = await import("../seasons/season-01.json");
-
-//   return JSON.parse(JSON.stringify(episodes));
-// }
-
-// export default async function Home() {
-//   const data = await getData();
-
-//   return (
-//     <main className="max-w-screen-sm m-auto p-4">
-//       <Form data={data} />
-//       <h2 className="text-5xl font-extrabold mt-4">Moaning Lisa</h2>
-//       <p className="dark:text-slate-400 mt-2">S01E06</p>
-//     </main>
-//   );
-// }
