@@ -1,16 +1,6 @@
 import Form from "./form";
 
-async function getRandomEpisode() {
-  const episodes: any = await import("../seasons/season-01.json");
-
-  return JSON.parse(JSON.stringify(episodes));
-}
-
 export default async function Home() {
-  const response = await getRandomEpisode();
-
-  const data = response.default;
-
   return (
     <main className="max-w-screen-sm m-auto p-4">
       <Form />
