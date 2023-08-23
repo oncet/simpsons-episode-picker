@@ -2,7 +2,7 @@
 
 import { Dices } from "lucide-react";
 
-import { ComboboxDemo } from "../components/combobox";
+import { Combobox } from "../components/combobox";
 import { Button } from "../components/ui/button";
 
 export default function Form() {
@@ -21,7 +21,7 @@ export default function Form() {
       }}
       className="flex flex-col gap-4"
     >
-      <ComboboxDemo />
+      <Combobox />
       <Button size="lg" className="uppercase font-extrabold tracking-tight">
         <Dices className="mr-2 h-4 w-4" />
         Get random episode

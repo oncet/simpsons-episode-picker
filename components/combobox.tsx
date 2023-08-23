@@ -29,7 +29,7 @@ const seasons = [
   })),
 ];
 
-export function ComboboxDemo() {
+export function Combobox() {
   const [open, setOpen] = React.useState(false);
   const [selectedOptions, setSelectedOptions] = React.useState<string[]>([
     seasons[0].value,
