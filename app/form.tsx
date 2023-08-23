@@ -15,14 +15,12 @@ export default function Form() {
 
         const selectedSeasons = data.get("seasons");
 
-        console.log("selectedSeasons", selectedSeasons);
-
         const urlParams = new URLSearchParams(window.location.search);
 
         if (selectedSeasons) {
           urlParams.set("seasons", selectedSeasons.toString());
 
-          history.pushState({}, "", `?${urlParams.toString()}`);
+          history.pushState({}, "", "?" + urlParams.toString());
         } else {
           history.pushState({}, "", "/");
         }
