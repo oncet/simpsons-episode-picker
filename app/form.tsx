@@ -17,6 +17,16 @@ export default function Form() {
 
         console.log("selectedSeasons", selectedSeasons);
 
+        const urlParams = new URLSearchParams(window.location.search);
+
+        if (selectedSeasons) {
+          urlParams.set("seasons", selectedSeasons.toString());
+
+          history.pushState({}, "", `?${urlParams.toString()}`);
+        } else {
+          history.pushState({}, "", "/");
+        }
+
         // onSubmit(selectedSeasons);
       }}
       className="flex flex-col gap-4"
