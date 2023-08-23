@@ -5,7 +5,7 @@ import { Dices } from "lucide-react";
 import { ComboboxDemo } from "../components/combobox";
 import { Button } from "../components/ui/button";
 
-export default function Form({ onSubmit }: any) {
+export default function Form() {
   return (
     <form
       onSubmit={(event: any) => {
@@ -15,7 +15,9 @@ export default function Form({ onSubmit }: any) {
 
         const selectedSeasons = data.get("seasons");
 
-        onSubmit(selectedSeasons);
+        console.log("selectedSeasons", selectedSeasons);
+
+        // onSubmit(selectedSeasons);
       }}
       className="flex flex-col gap-4"
     >
