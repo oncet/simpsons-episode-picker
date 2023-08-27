@@ -46,8 +46,8 @@ export default function Home() {
         <div className={isLoading ? "animate-pulse" : ""}>
           {episode ? (
             <>
-              <h2 className="text-5xl font-extrabold">Moaning Lisa</h2>
-              <p className="dark:text-slate-400 mt-2">S01E06</p>
+              <h2 className="text-5xl font-extrabold">{episode.title}</h2>
+              <p className="dark:text-slate-400 mt-2">{episode.code}</p>
             </>
           ) : (
             ""
