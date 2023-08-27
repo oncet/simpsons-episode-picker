@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ModeToggle } from "../components/mode-toggle";
 import { ThemeProvider } from "../components/theme-prodivers";
 import "./globals.css";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,8 +23,10 @@ export default function RootLayout({
         <ThemeProvider attribute="class">
           <header className="border-b">
             <div className="dark:text-slate-400 mx-auto max-w-screen-sm px-4 py-2 flex items-center justify-between">
-              <h1 className="flex items-center">
-                <Tv className="mr-2 h-4 w-4" /> Random episoder
+              <h1>
+                <Link href="/" className="flex items-center">
+                  <Tv className="mr-2 h-4 w-4" /> Random episoder
+                </Link>
               </h1>
               <ModeToggle />
             </div>
