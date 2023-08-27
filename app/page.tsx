@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AlertCircle, FileWarning, Terminal } from "lucide-react";
+import { AlertCircle } from "lucide-react";
 
 import Form, { Episode } from "./form";
 import { Alert, AlertDescription, AlertTitle } from "../components/ui/alert";
@@ -46,7 +46,9 @@ export default function Home() {
         <div className={isLoading ? "animate-pulse" : ""}>
           {episode ? (
             <>
-              <h2 className="text-5xl font-extrabold">{episode.title}</h2>
+              <h2 className="text-5xl font-extrabold text-white">
+                {episode.title}
+              </h2>
               <p className="dark:text-slate-400 mt-2">{episode.code}</p>
             </>
           ) : (

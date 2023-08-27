@@ -1,26 +1,9 @@
 "use client";
 
-import { Dices, Loader2 } from "lucide-react";
-import { useState } from "react";
+import { Dices } from "lucide-react";
 
 import { Combobox } from "../components/combobox";
 import { Button } from "../components/ui/button";
-
-const updateSearchParams = (value?: string) => {
-  const urlParams = new URLSearchParams(window.location.search);
-
-  if (value) {
-    urlParams.set("seasons", value);
-  } else {
-    urlParams.delete("seasons");
-  }
-
-  history.pushState(
-    {},
-    "",
-    urlParams.size > 0 ? "?" + urlParams.toString() : "."
-  );
-};
 
 export type Episode = {
   title: string;
@@ -41,8 +24,6 @@ export default function Form({ onSubmit, isLoading }: Form) {
         const data = new FormData(event.target);
 
         const selectedSeasons = data.get("seasons");
-
-        updateSearchParams(selectedSeasons?.toString());
 
         onSubmit(selectedSeasons?.toString());
       }}
