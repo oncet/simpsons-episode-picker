@@ -7,22 +7,26 @@ export default function Home() {
   const [episode, setEpisode] = useState<Episode>();
   const [isLoading, setIsLoading] = useState(false);
 
-  console.log(episode);
+  const onSubmit = async (selectedSeasons?: string) => {
+    setIsLoading(true);
 
-  const onSubmit = (selectedSeasons?: string) => {
-    setEpisode({
-      title: "Moaning Lisa",
-      code: "S01E06",
+    const res = await fetch("/get-random-episode", {
+      method: "POST",
+      body: JSON.stringify({
+        seasons: selectedSeasons,
+      }),
     });
+
+    const episode = await res.json();
+
+    setIsLoading(false);
+
+    setEpisode(episode);
   };
 
   return (
     <main className="max-w-screen-sm m-auto p-4">
-      <Form
-        onSubmit={onSubmit}
-        onLoading={setIsLoading}
-        isLoading={isLoading}
-      />
+      <Form onSubmit={onSubmit} isLoading={isLoading} />
       <div
         className={
           "transition duration-300 mt-4   " +

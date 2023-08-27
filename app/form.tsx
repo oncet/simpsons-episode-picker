@@ -29,16 +29,13 @@ export type Episode = {
 
 type Form = {
   onSubmit: (value?: string) => void;
-  onLoading: (value: boolean) => void;
   isLoading: boolean;
 };
 
-export default function Form({ onSubmit, onLoading, isLoading }: Form) {
+export default function Form({ onSubmit, isLoading }: Form) {
   return (
     <form
       onSubmit={(event: any) => {
-        onLoading(true);
-
         event.preventDefault();
 
         const data = new FormData(event.target);
@@ -47,10 +44,7 @@ export default function Form({ onSubmit, onLoading, isLoading }: Form) {
 
         updateSearchParams(selectedSeasons?.toString());
 
-        setTimeout(() => {
-          onLoading(false);
-          onSubmit(selectedSeasons?.toString());
-        }, 2000);
+        onSubmit(selectedSeasons?.toString());
       }}
       className="flex flex-col gap-4"
     >
