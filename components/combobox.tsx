@@ -23,10 +23,14 @@ const seasons = [
     value: "all",
     label: "All seasons",
   },
-  ...Array.from({ length: 33 }, (_, i) => ({
-    value: `${i + 1}`,
-    label: `Season ${i + 1}`,
-  })),
+  ...Array.from({ length: 33 }, (_, i) => {
+    const season = String(i + 1);
+
+    return {
+      value: season.padStart(2, "0"),
+      label: `Season ${season}`,
+    };
+  }),
 ];
 
 export function Combobox() {
