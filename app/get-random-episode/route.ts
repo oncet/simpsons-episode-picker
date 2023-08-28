@@ -3,7 +3,9 @@ import { NextResponse } from "next/server";
 export async function POST(request: Request) {
   const body = await request.json();
 
-  const selectedSeasons = body.seasons?.split("-");
+  const selectedSeasons =
+    body.seasons?.split("-") ||
+    Array.from({ length: 33 }, (_, i) => String(i + 1).padStart(2, "0"));
 
   const episodes = [];
 
