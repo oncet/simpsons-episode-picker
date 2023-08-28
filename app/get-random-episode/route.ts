@@ -8,19 +8,19 @@ export async function POST(request: Request) {
   const episodes = [];
 
   for (const season of selectedSeasons) {
-    const path = `../../seasons/season-${season}.json`;
-
     const seasonEpisodes = Array.from(
       await import(`../../seasons/season-${season}.json`)
     ) as {
       Title: string;
-      ["No. inseason"]: string;
+      ["No. inseason"]: number;
     }[];
 
     episodes.push(
       ...Array.from(seasonEpisodes).map((episode) => ({
         title: episode.Title,
-        code: `S${season}E${episode["No. inseason"]}`,
+        code: `S${season}E${episode["No. inseason"]
+          .toString()
+          .padStart(2, "0")}`,
       }))
     );
   }
