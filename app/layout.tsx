@@ -25,8 +25,8 @@ export default function RootLayout({
             <div className="dark:text-slate-400 mx-auto max-w-screen-sm px-4 py-2 flex items-center justify-between">
               <h1>
                 <Link href="/" className="flex items-center">
-                  <Tv className="mr-2 h-4 w-4 text-yellow-400" /> Random
-                  episoder
+                  <Tv className="mr-2 h-4 w-4 text-blue-600 dark:text-yellow-400" />{" "}
+                  Simpsons episode picker
                 </Link>
               </h1>
               <ModeToggle />
