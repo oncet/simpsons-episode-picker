@@ -63,7 +63,7 @@ export function Combobox() {
         </PopoverTrigger>
         <PopoverContent className="p-0 w-[--radix-popover-trigger-width]">
           <Command>
-            <CommandInput placeholder="Search seasons..." />
+            {/* <CommandInput placeholder="Search seasons..." className="" /> */}
             <CommandEmpty>No season found.</CommandEmpty>
             <CommandGroup>
               {seasons.map((season) => (
