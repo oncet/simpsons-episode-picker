@@ -26,9 +26,9 @@ export default function RootLayout({
               <h1>
                 <Link
                   href="/"
-                  className="flex items-center text-slate-500 hover:text-slate-800 hover:dark:text-white group transition"
+                  className="flex items-center text-slate-500 dark:text-slate-300 hover:text-slate-800 hover:dark:text-slate-100 group transition"
                 >
-                  <Tv className="mr-2 h-4 w-4 text-blue-600 dark:text-yellow-400 group-hover:scale-125 group-hover:-rotate-12 transition" />{" "}
+                  <Tv className="mr-2 h-4 w-4 text-blue-600 dark:text-yellow-400 group-hover:scale-125 group-hover:-rotate-12 stroke-[3px] transition" />{" "}
                   Simpsons episode picker
                 </Link>
               </h1>
