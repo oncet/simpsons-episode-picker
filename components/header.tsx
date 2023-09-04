@@ -6,13 +6,13 @@ import { ModeToggle } from "../components/mode-toggle";
 export function Header() {
   return (
     <header className="border-b">
-      <div className="mx-auto flex max-w-screen-sm items-center justify-between px-4 py-2 dark:text-slate-400">
+      <div className="dark:text-slate-400 mx-auto max-w-screen-sm px-4 py-2 flex items-center justify-between">
         <h1>
           <Link
             href="/"
-            className="group flex items-center text-slate-500 transition hover:text-slate-800 dark:text-slate-300 hover:dark:text-slate-100"
+            className="flex items-center text-slate-500 dark:text-slate-300 hover:text-slate-800 hover:dark:text-slate-100 group transition"
           >
-            <Tv className="mr-2 h-4 w-4 stroke-[3px] text-blue-600 transition group-hover:-rotate-12 group-hover:scale-125 dark:text-yellow-400" />{" "}
+            <Tv className="mr-2 h-4 w-4 text-blue-600 dark:text-yellow-400 group-hover:scale-125 group-hover:-rotate-12 stroke-[3px] transition" />{" "}
             Simpsons episode picker
           </Link>
         </h1>
