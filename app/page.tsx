@@ -35,12 +35,12 @@ export default function Home() {
   };
 
   return (
-    <main className="max-w-screen-sm m-auto p-4">
+    <main className="m-auto max-w-screen-sm p-4">
       <Form onSubmit={onSubmit} isLoading={isLoading} />
       <div
         className={
-          "transition duration-300 mt-4 " +
-          (episode ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8")
+          "mt-4 transition duration-300 " +
+          (episode ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0")
         }
       >
         <div className={isLoading ? "animate-pulse" : ""}>
@@ -49,7 +49,7 @@ export default function Home() {
               <h2 className="text-5xl font-extrabold dark:text-white">
                 {episode.title}
               </h2>
-              <p className="dark:text-slate-400 mt-2">{episode.code}</p>
+              <p className="mt-2 dark:text-slate-400">{episode.code}</p>
             </>
           ) : (
             ""
@@ -58,8 +58,8 @@ export default function Home() {
       </div>
       <div
         className={
-          "transition duration-300 mt-4 " +
-          (error ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8")
+          "mt-4 transition duration-300 " +
+          (error ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0")
         }
       >
         <Alert variant="destructive">
