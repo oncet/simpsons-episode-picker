@@ -9,7 +9,6 @@ import {
   Command,
   CommandEmpty,
   CommandGroup,
-  CommandInput,
   CommandItem,
 } from "@/components/ui/command";
 import {
@@ -50,7 +49,7 @@ export function Combobox() {
             aria-label="Select seasons"
             className="w-full justify-between"
           >
-            <span className="text-ellipsis overflow-hidden whitespace-nowrap">
+            <span className="overflow-hidden text-ellipsis whitespace-nowrap">
               {selectedOptions[0] === "all"
                 ? seasons[0].label
                 : seasons
@@ -61,7 +60,7 @@ export function Combobox() {
             <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="p-0 w-[--radix-popover-trigger-width]">
+        <PopoverContent className="w-[--radix-popover-trigger-width] p-0">
           <Command>
             {/* <CommandInput placeholder="Search seasons..." className="" /> */}
             <CommandEmpty>No season found.</CommandEmpty>
@@ -79,8 +78,8 @@ export function Combobox() {
                       if (currentValue !== all && selectedOptions.length > 1) {
                         setSelectedOptions(
                           selectedOptions.filter(
-                            (option) => option !== currentValue
-                          )
+                            (option) => option !== currentValue,
+                          ),
                         );
                       }
 
@@ -97,7 +96,7 @@ export function Combobox() {
                       } else {
                         setSelectedOptions([
                           ...selectedOptions.filter(
-                            (selectedOption) => selectedOption !== "all"
+                            (selectedOption) => selectedOption !== "all",
                           ),
                           currentValue,
                         ]);
@@ -110,7 +109,7 @@ export function Combobox() {
                       "mr-2 h-4 w-4",
                       selectedOptions.includes(season.value)
                         ? "opacity-100"
-                        : "opacity-0"
+                        : "opacity-0",
                     )}
                   />
                   {season.label}
