@@ -32,7 +32,7 @@ export default function Form({ onSubmit, isLoading }: Form) {
       <Button
         size="lg"
         disabled={isLoading}
-        className="uppercase font-extrabold tracking-tight [-webkit-tap-highlight-color:transparent]"
+        className="font-extrabold uppercase tracking-tight [-webkit-tap-highlight-color:transparent]"
       >
         <Dices
           className={"mr-2 h-4 w-4 " + (isLoading ? "animate-pulse" : "")}
