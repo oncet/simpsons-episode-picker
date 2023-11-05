@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { Header } from "../components/header";
 import { ThemeProvider } from "../components/theme-prodivers";
+import { Toaster } from "@/components/ui/toaster";
 
 import "./globals.css";
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class">
           <Header />
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
