@@ -9,6 +9,7 @@ import {
   Command,
   CommandEmpty,
   CommandGroup,
+  CommandInput,
   CommandItem,
 } from "@/components/ui/command";
 import {
@@ -62,7 +63,7 @@ export function Combobox() {
         </PopoverTrigger>
         <PopoverContent className="w-[--radix-popover-trigger-width] p-0">
           <Command>
-            {/* <CommandInput placeholder="Search seasons..." className="" /> */}
+            <CommandInput placeholder="Search seasons..." />
             <CommandEmpty>No season found.</CommandEmpty>
             <CommandGroup>
               {seasons.map((season) => (
