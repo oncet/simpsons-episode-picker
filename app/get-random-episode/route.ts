@@ -7,24 +7,19 @@ export async function POST(request: Request) {
     body.seasons?.split("-") ||
     Array.from({ length: 33 }, (_, i) => String(i + 1).padStart(2, "0"));
 
+  console.log("selectedSeasons", selectedSeasons);
+
   const episodes = [];
 
   for (const season of selectedSeasons) {
     const seasonEpisodes = Array.from(
-      await import(`../../seasons/season-${season}.json`)
+      await import(`../../seasons/season-${season}.json`),
     ) as {
-      Title: string;
-      ["No. inseason"]: number;
+      title: string;
+      code: string;
     }[];
 
-    episodes.push(
-      ...Array.from(seasonEpisodes).map((episode) => ({
-        title: episode.Title,
-        code: `S${season}E${episode["No. inseason"]
-          .toString()
-          .padStart(2, "0")}`,
-      }))
-    );
+    episodes.push(...Array.from(seasonEpisodes));
   }
 
   const randomEpisode = episodes[Math.floor(Math.random() * episodes.length)];

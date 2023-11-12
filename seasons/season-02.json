@@ -1,222 +1,90 @@
 [
   {
-    "No.overall": 14,
-    "No. inseason": 1,
-    "Title": "Bart Gets an 'F'",
-    "Directed by": "David Silverman",
-    "Written by": "David M. Stern",
-    "Original air date": "October 11, 1990 (1990-10-11)",
-    "Prod.code": "7F03",
-    "U.S. viewers(millions)": "33.6[58]"
+    "title": "Bart Gets an 'F'",
+    "code": "S02E01"
   },
   {
-    "No.overall": 15,
-    "No. inseason": 2,
-    "Title": "Simpson and Delilah",
-    "Directed by": "Rich Moore",
-    "Written by": "Jon Vitti",
-    "Original air date": "October 18, 1990 (1990-10-18)",
-    "Prod.code": "7F02",
-    "U.S. viewers(millions)": "29.9[59]"
+    "title": "Simpson and Delilah",
+    "code": "S02E02"
   },
   {
-    "No.overall": 16,
-    "No. inseason": 3,
-    "Title": "Treehouse of Horror",
-    "Directed by": "Wes Archer",
-    "Written by": "John Swartzwelder",
-    "Original air date": "October 25, 1990 (1990-10-25)",
-    "Prod.code": "7F04",
-    "U.S. viewers(millions)": "27.4[60]"
+    "title": "Treehouse of Horror",
+    "code": "S02E03"
   },
   {
-    "No.overall": 17,
-    "No. inseason": 4,
-    "Title": "Two Cars in Every Garage and Three Eyes on Every Fish",
-    "Directed by": "Wes Archer",
-    "Written by": "Sam Simon & John Swartzwelder",
-    "Original air date": "November 1, 1990 (1990-11-01)",
-    "Prod.code": "7F01",
-    "U.S. viewers(millions)": "26.1[61][62]"
+    "title": "Two Cars in Every Garage and Three Eyes on Every Fish",
+    "code": "S02E04"
   },
   {
-    "No.overall": 18,
-    "No. inseason": 5,
-    "Title": "Dancin' Homer",
-    "Directed by": "Mark Kirkland",
-    "Written by": "Ken Levine & David Isaacs",
-    "Original air date": "November 8, 1990 (1990-11-08)",
-    "Prod.code": "7F05",
-    "U.S. viewers(millions)": ""
+    "title": "Dancin' Homer",
+    "code": "S02E05"
   },
   {
-    "No.overall": 19,
-    "No. inseason": 6,
-    "Title": "Dead Putting Society",
-    "Directed by": "Rich Moore",
-    "Written by": "Jeff Martin",
-    "Original air date": "November 15, 1990 (1990-11-15)",
-    "Prod.code": "7F08",
-    "U.S. viewers(millions)": "25.4[63]"
+    "title": "Dead Putting Society",
+    "code": "S02E06"
   },
   {
-    "No.overall": 20,
-    "No. inseason": 7,
-    "Title": "Bart vs. Thanksgiving",
-    "Directed by": "David Silverman",
-    "Written by": "George Meyer",
-    "Original air date": "November 22, 1990 (1990-11-22)",
-    "Prod.code": "7F07",
-    "U.S. viewers(millions)": "25.9[64]"
+    "title": "Bart vs. Thanksgiving",
+    "code": "S02E07"
   },
   {
-    "No.overall": 21,
-    "No. inseason": 8,
-    "Title": "Bart the Daredevil",
-    "Directed by": "Wes Archer",
-    "Written by": "Jay Kogen & Wallace Wolodarsky",
-    "Original air date": "December 6, 1990 (1990-12-06)",
-    "Prod.code": "7F06",
-    "U.S. viewers(millions)": "26.2[65]"
+    "title": "Bart the Daredevil",
+    "code": "S02E08"
   },
   {
-    "No.overall": 22,
-    "No. inseason": 9,
-    "Title": "Itchy & Scratchy & Marge",
-    "Directed by": "Jim Reardon",
-    "Written by": "John Swartzwelder",
-    "Original air date": "December 20, 1990 (1990-12-20)",
-    "Prod.code": "7F09",
-    "U.S. viewers(millions)": "22.2[66]"
+    "title": "Itchy & Scratchy & Marge",
+    "code": "S02E09"
   },
   {
-    "No.overall": 23,
-    "No. inseason": 10,
-    "Title": "Bart Gets Hit by a Car",
-    "Directed by": "Mark Kirkland",
-    "Written by": "",
-    "Original air date": "January 10, 1991 (1991-01-10)",
-    "Prod.code": "7F10",
-    "U.S. viewers(millions)": "24.8[67]"
+    "title": "Bart Gets Hit by a Car",
+    "code": "S02E10"
   },
   {
-    "No.overall": 24,
-    "No. inseason": 11,
-    "Title": "One Fish, Two Fish, Blowfish, Blue Fish",
-    "Directed by": "Wes Archer",
-    "Written by": "Nell Scovell",
-    "Original air date": "January 24, 1991 (1991-01-24)",
-    "Prod.code": "7F11",
-    "U.S. viewers(millions)": "24.2[68]"
+    "title": "One Fish, Two Fish, Blowfish, Blue Fish",
+    "code": "S02E11"
   },
   {
-    "No.overall": 25,
-    "No. inseason": 12,
-    "Title": "The Way We Was",
-    "Directed by": "David Silverman",
-    "Written by": "Al Jean, Mike Reiss & Sam Simon",
-    "Original air date": "January 31, 1991 (1991-01-31)",
-    "Prod.code": "7F12",
-    "U.S. viewers(millions)": "26.8[69]"
+    "title": "The Way We Was",
+    "code": "S02E12"
   },
   {
-    "No.overall": 26,
-    "No. inseason": 13,
-    "Title": "Homer vs. Lisa and the 8th Commandment",
-    "Directed by": "Rich Moore",
-    "Written by": "Steve Pepoon",
-    "Original air date": "February 7, 1991 (1991-02-07)",
-    "Prod.code": "7F13",
-    "U.S. viewers(millions)": "26.2[70]"
+    "title": "Homer vs. Lisa and the 8th Commandment",
+    "code": "S02E13"
   },
   {
-    "No.overall": 27,
-    "No. inseason": 14,
-    "Title": "Principal Charming",
-    "Directed by": "Mark Kirkland",
-    "Written by": "David M. Stern",
-    "Original air date": "February 14, 1991 (1991-02-14)",
-    "Prod.code": "7F15",
-    "U.S. viewers(millions)": "23.9[71]"
+    "title": "Principal Charming",
+    "code": "S02E14"
   },
   {
-    "No.overall": 28,
-    "No. inseason": 15,
-    "Title": "Oh Brother, Where Art Thou?",
-    "Directed by": "Wes Archer",
-    "Written by": "Jeff Martin",
-    "Original air date": "February 21, 1991 (1991-02-21)",
-    "Prod.code": "7F16",
-    "U.S. viewers(millions)": "26.8[72]"
+    "title": "Oh Brother, Where Art Thou?",
+    "code": "S02E15"
   },
   {
-    "No.overall": 29,
-    "No. inseason": 16,
-    "Title": "Bart's Dog Gets an 'F'",
-    "Directed by": "Jim Reardon",
-    "Written by": "Jon Vitti",
-    "Original air date": "March 7, 1991 (1991-03-07)",
-    "Prod.code": "7F14",
-    "U.S. viewers(millions)": "23.9[73]"
+    "title": "Bart's Dog Gets an F",
+    "code": "S02E16"
   },
   {
-    "No.overall": 30,
-    "No. inseason": 17,
-    "Title": "Old Money",
-    "Directed by": "David Silverman",
-    "Written by": "Jay Kogen & Wallace Wolodarsky",
-    "Original air date": "March 28, 1991 (1991-03-28)",
-    "Prod.code": "7F17",
-    "U.S. viewers(millions)": "21.2[74]"
+    "title": "Old Money",
+    "code": "S02E17"
   },
   {
-    "No.overall": 31,
-    "No. inseason": 18,
-    "Title": "Brush with Greatness",
-    "Directed by": "Jim Reardon",
-    "Written by": "Brian K. Roberts",
-    "Original air date": "April 11, 1991 (1991-04-11)",
-    "Prod.code": "7F18",
-    "U.S. viewers(millions)": "20.6[75]"
+    "title": "Brush with Greatness",
+    "code": "S02E18"
   },
   {
-    "No.overall": 32,
-    "No. inseason": 19,
-    "Title": "Lisa's Substitute",
-    "Directed by": "Rich Moore",
-    "Written by": "Jon Vitti",
-    "Original air date": "April 25, 1991 (1991-04-25)",
-    "Prod.code": "7F19",
-    "U.S. viewers(millions)": "17.7[76]"
+    "title": "Lisa's Substitute",
+    "code": "S02E19"
   },
   {
-    "No.overall": 33,
-    "No. inseason": 20,
-    "Title": "The War of the Simpsons",
-    "Directed by": "Mark Kirkland",
-    "Written by": "John Swartzwelder",
-    "Original air date": "May 2, 1991 (1991-05-02)",
-    "Prod.code": "7F20",
-    "U.S. viewers(millions)": "19.7[77]"
+    "title": "The War of the Simpsons",
+    "code": "S02E20"
   },
   {
-    "No.overall": 34,
-    "No. inseason": 21,
-    "Title": "Three Men and a Comic Book",
-    "Directed by": "Wes Archer",
-    "Written by": "Jeff Martin",
-    "Original air date": "May 9, 1991 (1991-05-09)",
-    "Prod.code": "7F21",
-    "U.S. viewers(millions)": "21.0[78]"
+    "title": "Three Men and a Comic Book",
+    "code": "S02E21"
   },
   {
-    "No.overall": 35,
-    "No. inseason": 22,
-    "Title": "Blood Feud",
-    "Directed by": "David Silverman",
-    "Written by": "George Meyer",
-    "Original air date": "July 11, 1991 (1991-07-11)",
-    "Prod.code": "7F22",
-    "U.S. viewers(millions)": "17.3[79]"
+    "title": "Blood Feud",
+    "code": "S02E22"
   }
 ]

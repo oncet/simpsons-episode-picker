@@ -1,132 +1,54 @@
 [
   {
-    "No.overall": 1,
-    "No. inseason": 1,
-    "Title": "Simpsons Roasting on an Open Fire",
-    "Directed by": "David Silverman",
-    "Written by": "Mimi Pond",
-    "Original air date": "December 17, 1989 (1989-12-17)",
-    "Prod.code": "7G08",
-    "U.S. viewers(millions)": "26.7[46]"
+    "title": "Simpsons Roasting on an Open Fire",
+    "code": "S01E01"
   },
   {
-    "No.overall": 2,
-    "No. inseason": 2,
-    "Title": "Bart the Genius",
-    "Directed by": "",
-    "Written by": "Jon Vitti",
-    "Original air date": "January 14, 1990 (1990-01-14)",
-    "Prod.code": "7G02",
-    "U.S. viewers(millions)": "24.5[46]"
+    "title": "Bart the Genius",
+    "code": "S01E02"
   },
   {
-    "No.overall": 3,
-    "No. inseason": 3,
-    "Title": "Homer's Odyssey",
-    "Directed by": "Wes Archer",
-    "Written by": "Jay Kogen & Wallace Wolodarsky",
-    "Original air date": "January 21, 1990 (1990-01-21)",
-    "Prod.code": "7G03",
-    "U.S. viewers(millions)": "27.5[47]"
+    "title": "Homer's Odyssey",
+    "code": "S01E03"
   },
   {
-    "No.overall": 4,
-    "No. inseason": 4,
-    "Title": "There's No Disgrace Like Home",
-    "Directed by": "Gregg Vanzo & Kent Butterworth",
-    "Written by": "Al Jean & Mike Reiss",
-    "Original air date": "January 28, 1990 (1990-01-28)",
-    "Prod.code": "7G04",
-    "U.S. viewers(millions)": "20.2[48]"
+    "title": "There's No Disgrace Like Home",
+    "code": "S01E04"
   },
   {
-    "No.overall": 5,
-    "No. inseason": 5,
-    "Title": "Bart the General",
-    "Directed by": "David Silverman",
-    "Written by": "John Swartzwelder",
-    "Original air date": "February 4, 1990 (1990-02-04)",
-    "Prod.code": "7G05",
-    "U.S. viewers(millions)": "27.1[49]"
+    "title": "Bart the General",
+    "code": "S01E05"
   },
   {
-    "No.overall": 6,
-    "No. inseason": 6,
-    "Title": "Moaning Lisa",
-    "Directed by": "Wes Archer",
-    "Written by": "Al Jean & Mike Reiss",
-    "Original air date": "February 11, 1990 (1990-02-11)",
-    "Prod.code": "7G06",
-    "U.S. viewers(millions)": "27.4[50]"
+    "title": "Moaning Lisa",
+    "code": "S01E06"
   },
   {
-    "No.overall": 7,
-    "No. inseason": 7,
-    "Title": "The Call of the Simpsons",
-    "Directed by": "",
-    "Written by": "John Swartzwelder",
-    "Original air date": "February 18, 1990 (1990-02-18)",
-    "Prod.code": "7G09",
-    "U.S. viewers(millions)": "27.6[51]"
+    "title": "The Call of the Simpsons",
+    "code": "S01E07"
   },
   {
-    "No.overall": 8,
-    "No. inseason": 8,
-    "Title": "The Telltale Head",
-    "Directed by": "Rich Moore",
-    "Written by": "Al Jean, Mike Reiss, Sam Simon & Matt Groening",
-    "Original air date": "February 25, 1990 (1990-02-25)",
-    "Prod.code": "7G07",
-    "U.S. viewers(millions)": "28.0[52]"
+    "title": "The Telltale Head",
+    "code": "S01E08"
   },
   {
-    "No.overall": 9,
-    "No. inseason": 9,
-    "Title": "Life on the Fast Lane",
-    "Directed by": "David Silverman",
-    "Written by": "John Swartzwelder",
-    "Original air date": "March 18, 1990 (1990-03-18)",
-    "Prod.code": "7G11",
-    "U.S. viewers(millions)": "33.5[53]"
+    "title": "Life on the Fast Lane",
+    "code": "S01E09"
   },
   {
-    "No.overall": 10,
-    "No. inseason": 10,
-    "Title": "Homer's Night Out",
-    "Directed by": "Rich Moore",
-    "Written by": "Jon Vitti",
-    "Original air date": "March 25, 1990 (1990-03-25)",
-    "Prod.code": "7G10",
-    "U.S. viewers(millions)": "30.3[54]"
+    "title": "Homer's Night Out",
+    "code": "S01E10"
   },
   {
-    "No.overall": 11,
-    "No. inseason": 11,
-    "Title": "The Crepes of Wrath",
-    "Directed by": "Wes Archer & Milton Gray",
-    "Written by": "George Meyer, Sam Simon, John Swartzwelder & Jon Vitti",
-    "Original air date": "April 15, 1990 (1990-04-15)",
-    "Prod.code": "7G13",
-    "U.S. viewers(millions)": "31.2[55]"
+    "title": "The Crepes of Wrath",
+    "code": "S01E11"
   },
   {
-    "No.overall": 12,
-    "No. inseason": 12,
-    "Title": "Krusty Gets Busted",
-    "Directed by": "Brad Bird",
-    "Written by": "Jay Kogen & Wallace Wolodarsky",
-    "Original air date": "April 29, 1990 (1990-04-29)",
-    "Prod.code": "7G12",
-    "U.S. viewers(millions)": "30.4[56]"
+    "title": "Krusty Gets Busted",
+    "code": "S01E12"
   },
   {
-    "No.overall": 13,
-    "No. inseason": 13,
-    "Title": "Some Enchanted Evening",
-    "Directed by": "David Silverman & Kent Butterworth",
-    "Written by": "Matt Groening & Sam Simon",
-    "Original air date": "May 13, 1990 (1990-05-13)",
-    "Prod.code": "7G01",
-    "U.S. viewers(millions)": "27.1[57]"
+    "title": "Some Enchanted Evening",
+    "code": "S01E13"
   }
 ]
