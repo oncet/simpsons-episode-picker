@@ -1,8 +1,9 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 
+import { Toaster } from "@/components/ui/toaster";
 import { Header } from "../components/header";
 import { ThemeProvider } from "../components/theme-prodivers";
-import { Toaster } from "@/components/ui/toaster";
 
 import "./globals.css";
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class">
           <Header />
           {children}
+          <Analytics />
           <Toaster />
         </ThemeProvider>
       </body>
