@@ -7,8 +7,6 @@ export async function POST(request: Request) {
     body.seasons?.split("-") ||
     Array.from({ length: 33 }, (_, i) => String(i + 1).padStart(2, "0"));
 
-  console.log("selectedSeasons", selectedSeasons);
-
   const episodes = [];
 
   for (const season of selectedSeasons) {
