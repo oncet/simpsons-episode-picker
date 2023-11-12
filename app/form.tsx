@@ -41,9 +41,7 @@ export default function Form({ onSubmit, isLoading }: Form) {
           Get random episode
         </span>
       </Button>
-      <div className={isLoading ? "animate-pulse" : ""}>
-        <Combobox />
-      </div>
+      <Combobox />
     </form>
   );
 }
