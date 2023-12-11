@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { AlertCircle } from "lucide-react";
 
 import Form, { Episode } from "./form";
@@ -9,15 +9,15 @@ import { useToast } from "@/components/ui/use-toast";
 export default function Home() {
   const [episode, setEpisode] = useState<Episode>();
   const [isLoading, setIsLoading] = useState(false);
-  const [toastId, setToastId] = useState<string>();
+  const toastIdRef = useRef<string | null>(null);
 
   const { toast, dismiss } = useToast();
 
   const onSubmit = async (selectedSeasons?: string) => {
     setIsLoading(true);
 
-    if (toastId) {
-      dismiss(toastId);
+    if (toastIdRef.current) {
+      dismiss(toastIdRef.current);
     }
 
     try {
@@ -46,7 +46,8 @@ export default function Home() {
       });
 
       setIsLoading(false);
-      setToastId(id);
+
+      toastIdRef.current = id;
     }
   };
 
