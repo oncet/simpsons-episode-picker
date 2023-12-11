@@ -70,36 +70,36 @@ export function Combobox() {
                 <CommandItem
                   key={season.value}
                   value={season.value}
-                  onSelect={(currentValue) => {
+                  onSelect={(selectedValue) => {
                     const all = seasons[0].value;
 
                     // Remove clicked option
-                    if (selectedOptions.includes(currentValue)) {
+                    if (selectedOptions.includes(selectedValue)) {
                       // Remove clicked option if it's not the only one
-                      if (currentValue !== all && selectedOptions.length > 1) {
+                      if (selectedValue !== all && selectedOptions.length > 1) {
                         setSelectedOptions(
                           selectedOptions.filter(
-                            (option) => option !== currentValue,
+                            (option) => option !== selectedValue,
                           ),
                         );
                       }
 
                       // Select all if none is left selected
-                      else if (currentValue !== all) {
+                      else if (selectedValue !== all) {
                         setSelectedOptions([all]);
                       }
                     }
 
                     // Add clicked option
                     else {
-                      if (currentValue === all) {
+                      if (selectedValue === all) {
                         setSelectedOptions([all]);
                       } else {
                         setSelectedOptions([
                           ...selectedOptions.filter(
                             (selectedOption) => selectedOption !== "all",
                           ),
-                          currentValue,
+                          selectedValue,
                         ]);
                       }
                     }
