@@ -42,6 +42,8 @@ export function Combobox() {
   const [lastSelectedOption, setLastSelectedOption] =
     React.useState<string>("");
 
+  console.log("selectedOptions", selectedOptions);
+
   React.useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.shiftKey) {
@@ -147,10 +149,12 @@ export function Combobox() {
                           );
 
                           setSelectedOptions([
-                            ...selectedOptions,
-                            ...seasons
-                              .slice(start, end + 1)
-                              .map((season) => season.value),
+                            ...new Set([
+                              ...selectedOptions,
+                              ...seasons
+                                .slice(start, end + 1)
+                                .map((season) => season.value),
+                            ]),
                           ]);
                         } else {
                           setSelectedOptions([
