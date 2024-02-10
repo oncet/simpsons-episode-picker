@@ -39,10 +39,7 @@ export function Combobox() {
     seasons[0].value,
   ]);
   const [shiftKey, setShiftKey] = React.useState(false);
-  const [lastSelectedOption, setLastSelectedOption] =
-    React.useState<string>("");
-
-  console.log("selectedOptions", selectedOptions);
+  const [lastClickedOption, setLastClickedOption] = React.useState<string>("");
 
   React.useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -68,7 +65,7 @@ export function Combobox() {
 
   React.useEffect(() => {
     if (!open) {
-      setLastSelectedOption("");
+      setLastClickedOption("");
     }
   }, [open]);
 
@@ -104,6 +101,8 @@ export function Combobox() {
                   key={season.value}
                   value={season.value}
                   onSelect={(selectedValue) => {
+                    setLastClickedOption(selectedValue);
+
                     const all = seasons[0].value;
 
                     // Remove clicked option
@@ -128,11 +127,9 @@ export function Combobox() {
                       if (selectedValue === all) {
                         setSelectedOptions([all]);
                       } else {
-                        setLastSelectedOption(selectedValue);
-
-                        if (shiftKey && lastSelectedOption) {
+                        if (shiftKey && lastClickedOption) {
                           const lastSelectedOptionIndex = seasons.findIndex(
-                            (season) => season.value === lastSelectedOption,
+                            (season) => season.value === lastClickedOption,
                           );
 
                           const selectedValueIndex = seasons.findIndex(
