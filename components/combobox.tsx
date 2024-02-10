@@ -1,9 +1,8 @@
 "use client";
 
-import * as React from "react";
 import { Check, ChevronsUpDown } from "lucide-react";
+import * as React from "react";
 
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
   Command,
@@ -17,6 +16,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
 
 const seasons = [
   {
@@ -38,6 +38,37 @@ export function Combobox() {
   const [selectedOptions, setSelectedOptions] = React.useState<string[]>([
     seasons[0].value,
   ]);
+  const [shiftKey, setShiftKey] = React.useState(false);
+  const [lastSelectedOption, setLastSelectedOption] =
+    React.useState<string>("");
+
+  React.useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.shiftKey) {
+        setShiftKey(true);
+      }
+    };
+
+    const handleKeyUp = (event: KeyboardEvent) => {
+      if (!event.shiftKey) {
+        setShiftKey(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("keyup", handleKeyUp);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keyup", handleKeyUp);
+    };
+  }, []);
+
+  React.useEffect(() => {
+    if (!open) {
+      setLastSelectedOption("");
+    }
+  }, [open]);
 
   return (
     <>
@@ -95,12 +126,40 @@ export function Combobox() {
                       if (selectedValue === all) {
                         setSelectedOptions([all]);
                       } else {
-                        setSelectedOptions([
-                          ...selectedOptions.filter(
-                            (selectedOption) => selectedOption !== "all",
-                          ),
-                          selectedValue,
-                        ]);
+                        setLastSelectedOption(selectedValue);
+
+                        if (shiftKey && lastSelectedOption) {
+                          const lastSelectedOptionIndex = seasons.findIndex(
+                            (season) => season.value === lastSelectedOption,
+                          );
+
+                          const selectedValueIndex = seasons.findIndex(
+                            (season) => season.value === selectedValue,
+                          );
+
+                          const start = Math.min(
+                            lastSelectedOptionIndex,
+                            selectedValueIndex,
+                          );
+                          const end = Math.max(
+                            lastSelectedOptionIndex,
+                            selectedValueIndex,
+                          );
+
+                          setSelectedOptions([
+                            ...selectedOptions,
+                            ...seasons
+                              .slice(start, end + 1)
+                              .map((season) => season.value),
+                          ]);
+                        } else {
+                          setSelectedOptions([
+                            ...selectedOptions.filter(
+                              (selectedOption) => selectedOption !== "all",
+                            ),
+                            selectedValue,
+                          ]);
+                        }
                       }
                     }
                   }}
